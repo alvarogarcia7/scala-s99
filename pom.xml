@@ -115,4 +115,6 @@
 		</dependency>
 	</dependencies>
 
+	<name>S99</name>
+	<description>Doing the exercises from http://aperiodic.net/phil/scala/s-99/</description>
 </project>
