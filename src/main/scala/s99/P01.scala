@@ -14,7 +14,8 @@ object P01 {
 object P02 {
 	
 	def penultimate[T](list: List[T]): T = list match {
-		case head :: half :: tail => half
+		case penultimate :: last :: Nil => penultimate
+		case head :: tail => penultimate(tail)
 	}
 	
 }
