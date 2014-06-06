@@ -43,4 +43,9 @@ class P02Spec extends FlatSpec with ShouldMatchers {
 	  penultimate(List())
     }
   }
+  it should "fail in a one element list" in {
+	  intercept[NoSuchElementException]{
+		  penultimate(List(1))
+	  }
+  }
 }
