@@ -1,4 +1,4 @@
-package s99;
+package com.example.kata.scala.s99
 
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
@@ -7,6 +7,7 @@ import org.scalatest.matchers.ShouldMatchers
 import scala.collection.mutable.Stack
 import scala.collection.mutable.LinkedList
 import org.scalatest.BeforeAndAfter
+import com.example.kata.scala.s99.P01.last
 
 @RunWith(classOf[JUnitRunner])
 class P01Spec extends FlatSpec with ShouldMatchers with BeforeAndAfter{
@@ -29,10 +30,4 @@ class P01Spec extends FlatSpec with ShouldMatchers with BeforeAndAfter{
     }
   }
   
-  def last(list:LinkedList[Int]): Int = {
-    val last = list.get(list.size-1).get
-    println(last)
-    last
-  }
-
 }
