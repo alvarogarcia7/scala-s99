@@ -38,4 +38,9 @@ class P02Spec extends FlatSpec with ShouldMatchers {
   "Penultimate()" should "do the same in a two element list" in {
 	  penultimate(List(-1, 5)) shouldBe -1
   }
+  "Penultimate()" should "fail in an empty list" in {
+    intercept[NoSuchElementException]{
+	  penultimate(List())
+    }
+  }
 }
