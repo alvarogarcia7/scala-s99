@@ -11,20 +11,26 @@ import org.scalatest.BeforeAndAfter
 import com.example.kata.scala.s99.P01.last
 
 @RunWith(classOf[JUnitRunner])
-class P01Spec extends FlatSpec with ShouldMatchers{
+class P01Spec extends FlatSpec with ShouldMatchers {
 
-  var list : List[Int] = null
-  
-  
+  var list: List[Int] = null
+
   "Last()" should "retrieve the last element in a list" in {
-    list = List(1,8)
+    list = List(1, 8)
     last(list) shouldBe 8
   }
-  
+
   it should "fail if the list is empty" in {
-    intercept[NoSuchElementException]{
-    	last(List())
+    intercept[NoSuchElementException] {
+      last(List())
     }
   }
-  
+
+}
+
+@RunWith(classOf[JUnitRunner])
+class P02Spec extends FlatSpec {
+	"Penultimate()" should "retrieve the penultimate element in a list" in {
+	  penultimate(List(1,-1,5)) shouldBe -1
+	}
 }
