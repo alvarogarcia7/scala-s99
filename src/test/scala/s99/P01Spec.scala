@@ -11,6 +11,7 @@ import scala.collection.mutable.LinkedList
 import org.scalatest.BeforeAndAfter
 import com.example.kata.scala.s99.P01.last
 import com.example.kata.scala.s99.P02.penultimate
+import com.example.kata.scala.s99.P03.kth
 
 @RunWith(classOf[JUnitRunner])
 class P01Spec extends FlatSpec with ShouldMatchers {
@@ -47,5 +48,13 @@ class P02Spec extends FlatSpec with ShouldMatchers {
 	  intercept[NoSuchElementException]{
 		  penultimate(List(1))
 	  }
+  }
+}
+
+
+@RunWith(classOf[JUnitRunner])
+class P03Spec extends FlatSpec with ShouldMatchers{
+  "Kth element" should "return the correct element from a list" in {
+    kth(2, List(1,1,2,5,8,13)) shouldBe 2
   }
 }
