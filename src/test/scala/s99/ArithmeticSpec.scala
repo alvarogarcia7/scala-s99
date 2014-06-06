@@ -11,7 +11,7 @@ class ArithmeticSpec extends Specification {
   "Arithmetic2" should {
     "add" in {
       "two numbers" in {
-        1 + 2 mustEqual 4
+        1 + 3 mustEqual 4
       }
       "three numbers" in {
         1 + 1 + 1 mustEqual 3 
