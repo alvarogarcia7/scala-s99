@@ -4,8 +4,8 @@ import scala.collection.mutable.LinkedList
 
 object P01 {
 
-  def last(list: LinkedList[Int]): Int = {
-    val last = list.get(list.size - 1).get
+  def last(list: List[Int]): Int = {
+    val last = list.last 
     println(last)
     last
   }
