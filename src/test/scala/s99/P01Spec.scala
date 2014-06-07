@@ -15,7 +15,6 @@ import com.example.kata.scala.s99.P03.kth
 import com.example.kata.scala.s99.P04.len
 import com.example.kata.scala.s99.P05.reverse
 
-
 @RunWith(classOf[JUnitRunner])
 class PSpec extends FlatSpec with ShouldMatchers {
 
@@ -42,13 +41,13 @@ class P02Spec extends PSpec {
   it should "do the same in a two element list" in {
     penultimate(List(-1, 5)) shouldBe -1
   }
-  
+
   it should "fail in an empty list" in {
     intercept[NoSuchElementException] {
       penultimate(List())
     }
   }
-  
+
   it should "fail in a one element list" in {
     intercept[NoSuchElementException] {
       penultimate(List(1))
@@ -85,11 +84,11 @@ class P04Spec extends PSpec {
   "length()" should "Find the number of elements of a one element list" in {
     len(List(7)) shouldBe 1
   }
-  
+
   it should "Find the number of elements of in non-empty list" in {
-    len(List(1,2,3,4,5,6)) shouldBe 6
+    len(List(1, 2, 3, 4, 5, 6)) shouldBe 6
   }
-  
+
   it should "Find the size in an empty list" in {
     len(List()) shouldBe 0
   }
@@ -99,14 +98,20 @@ class P05Spec extends PSpec {
   "reverse()" should "reverse a one element list" in {
     reverse(List(1)) shouldBe List(1)
   }
-  
+
   it should "reverse a two element list" in {
-    reverse(List(1,2)) shouldBe List(2,1)
+    reverse(List(1, 2)) shouldBe List(2, 1)
   }
   it should "reverse any size list" in {
-	  reverse(List(1,2,3,4,5,6)) shouldBe List(6,5,4,3,2,1)
+    reverse(List(1, 2, 3, 4, 5, 6)) shouldBe List(6, 5, 4, 3, 2, 1)
   }
   it should "reverse an empty list" in {
-	  reverse(List()) shouldBe List()
+    reverse(List()) shouldBe List()
+  }
+}
+
+class P06Spec extends PSpec {
+  "palindrome()" should "detect if a list is a palindrome" in {
+    palindrome(List(1, 2, 1)) shouldBe true
   }
 }
