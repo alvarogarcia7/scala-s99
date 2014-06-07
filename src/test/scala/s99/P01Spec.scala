@@ -37,43 +37,42 @@ class P02Spec extends FlatSpec with ShouldMatchers {
     penultimate(List(1, -1, 5)) shouldBe -1
   }
   it should "do the same in a two element list" in {
-	  penultimate(List(-1, 5)) shouldBe -1
+    penultimate(List(-1, 5)) shouldBe -1
   }
   it should "fail in an empty list" in {
-    intercept[NoSuchElementException]{
-	  penultimate(List())
+    intercept[NoSuchElementException] {
+      penultimate(List())
     }
   }
   it should "fail in a one element list" in {
-	  intercept[NoSuchElementException]{
-		  penultimate(List(1))
-	  }
+    intercept[NoSuchElementException] {
+      penultimate(List(1))
+    }
   }
 }
 
-
 @RunWith(classOf[JUnitRunner])
-class P03Spec extends FlatSpec with ShouldMatchers{
+class P03Spec extends FlatSpec with ShouldMatchers {
   "Kth element" should "return the first element from a list" in {
-    kth(1, List(1,1,2,5,8,13)) shouldBe 1
+    kth(1, List(1, 1, 2, 5, 8, 13)) shouldBe 1
   }
-  
+
   it should "do the same with an intermediate element" in {
-	  kth(5, List(1,1,2,5,8,13)) shouldBe 8
+    kth(5, List(1, 1, 2, 5, 8, 13)) shouldBe 8
   }
-  
+
   it should "do the same with the last element" in {
-	  kth(6, List(1,1,2,5,8,13)) shouldBe 13
+    kth(6, List(1, 1, 2, 5, 8, 13)) shouldBe 13
   }
-  
+
   it should "fail with an index over the list size " in {
-    intercept[IndexOutOfBoundsException]{
-	  kth(1, List())
+    intercept[IndexOutOfBoundsException] {
+      kth(1, List())
     }
   }
   it should "fail with the index 0" in {
-	  intercept[NoSuchElementException]{
-		  kth(0, List())
-	  }
+    intercept[NoSuchElementException] {
+      kth(0, List())
+    }
   }
 }
