@@ -116,3 +116,9 @@ class P06Spec extends PSpec {
     palindrome(List(1, 2, 1)) shouldBe true
   }
 }
+
+class P07Spec extends PSpec {
+  "flatten" should "flatten a nested list structure" in {
+    flatten(List(List(1, 1), 2, List(3, List(5, 8)))) shouldBe List(1, 1, 2, 3, 5, 8)
+  }
+}
