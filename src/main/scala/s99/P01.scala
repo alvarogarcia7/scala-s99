@@ -41,3 +41,7 @@ object P04{
     case _ :: tail => length(tail, size+1)
   }
 }
+
+object P05 {
+	def reverse[T] (list: List[T]) : List[T] = list
+}
