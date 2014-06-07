@@ -13,42 +13,42 @@ object P01 {
 
 }
 object P02 {
-	
-	def penultimate[T](list: List[T]): T = list match {
-		case penultimate :: last :: Nil => penultimate
-		case head :: tail => penultimate(tail)
-		case _ => throw new NoSuchElementException
-	}
-	
+
+  def penultimate[T](list: List[T]): T = list match {
+    case penultimate :: last :: Nil => penultimate
+    case head :: tail => penultimate(tail)
+    case _ => throw new NoSuchElementException
+  }
+
 }
 
-object P03{
+object P03 {
   def kth[T](k: Int, list: List[T]): T = (k, list) match {
     case (1, head :: tail) => head
-    case (k, head :: tail) => kth(k-1, tail)
+    case (k, head :: tail) => kth(k - 1, tail)
     case (0, _) => throw new NoSuchElementException
     case (_, Nil) => throw new IndexOutOfBoundsException
   }
 }
 
-object P04{
-  def len[T] (list: List[T]) : Int  = {
+object P04 {
+  def len[T](list: List[T]): Int = {
     length(list, 0)
   }
 
-  def length[T] (list: List[T], size: Int) : Int = list match {
+  def length[T](list: List[T], size: Int): Int = list match {
     case Nil => size
-    case _ :: tail => length(tail, size+1)
+    case _ :: tail => length(tail, size + 1)
   }
 }
 
 object P05 {
-	def reverse[T] (list: List[T]) : List[T] = {
-	  reverse(list, List())
-	}
-	
-	def reverse[T] (input: List[T], output: List[T]): List[T] = input match {
-	  case Nil => output
-	  case head :: tail => reverse(tail, output.+:(head))
-	}
+  def reverse[T](list: List[T]): List[T] = {
+    reverse(list, List())
+  }
+
+  def reverse[T](input: List[T], output: List[T]): List[T] = input match {
+    case Nil => output
+    case head :: tail => reverse(tail, output.+:(head))
+  }
 }
