@@ -88,4 +88,8 @@ class P04Spec extends PSpec {
   it should "Find the number of elements of in non-empty list" in {
     len(List(1,2,3,4,5,6)) shouldBe 6
   }
+  
+  it should "Find the size in an empty list" in {
+    len(List()) shouldBe 0
+  }
 }
