@@ -77,3 +77,9 @@ class P03Spec extends PSpec {
     }
   }
 }
+
+class P04Spec extends PSpec {
+  "length()" should "Find the number of elements of a non-empty list" in {
+    length(List(7)) shouldBe 1
+  }
+}
