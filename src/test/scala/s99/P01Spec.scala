@@ -84,7 +84,8 @@ class P04Spec extends PSpec {
   "length()" should "Find the number of elements of a one element list" in {
     len(List(7)) shouldBe 1
   }
-  "length()" should "Find the number of elements of in any size list" in {
+  
+  it should "Find the number of elements of in non-empty list" in {
     len(List(1,2,3,4,5,6)) shouldBe 6
   }
 }
