@@ -35,6 +35,7 @@ object P04{
   def len[T] (list: List[T]) : Int  = {
     length(list, 0)
   }
+
   def length[T] (list: List[T], size: Int) : Int = list match {
     case Nil => size
     case _ :: tail => length(tail, size+1)
