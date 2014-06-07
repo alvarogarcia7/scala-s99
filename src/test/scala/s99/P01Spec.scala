@@ -93,3 +93,9 @@ class P04Spec extends PSpec {
     len(List()) shouldBe 0
   }
 }
+
+class P05Spec extends PSpec {
+  "reverse()" should "reverse a one element list" in {
+    reverse(List(1)) shouldBe List(1)
+  }
+}
