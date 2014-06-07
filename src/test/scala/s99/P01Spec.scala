@@ -12,6 +12,8 @@ import org.scalatest.BeforeAndAfter
 import com.example.kata.scala.s99.P01.last
 import com.example.kata.scala.s99.P02.penultimate
 import com.example.kata.scala.s99.P03.kth
+import com.example.kata.scala.s99.P04.len
+
 
 @RunWith(classOf[JUnitRunner])
 class PSpec extends FlatSpec with ShouldMatchers {
@@ -80,6 +82,6 @@ class P03Spec extends PSpec {
 
 class P04Spec extends PSpec {
   "length()" should "Find the number of elements of a non-empty list" in {
-    length(List(7)) shouldBe 1
+    len(List(7)) shouldBe 1
   }
 }

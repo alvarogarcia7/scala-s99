@@ -30,3 +30,12 @@ object P03{
     case (_, Nil) => throw new IndexOutOfBoundsException
   }
 }
+
+object P04{
+  def len[T] (list: List[T]) : Int  = {
+    length(list, 0)
+  }
+  def length[T] (list: List[T], size: Int) : Int = {
+    1
+  }
+}
