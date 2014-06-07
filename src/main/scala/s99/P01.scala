@@ -21,3 +21,12 @@ object P02 {
 	}
 	
 }
+
+object P03{
+  def kth[T](k: Int, list: List[T]): T = (k, list) match {
+    case (1, head :: tail) => head
+    case (k, head :: tail) => kth(k-1, tail)
+    case (0, _) => throw new NoSuchElementException
+    case (_, Nil) => throw new IndexOutOfBoundsException
+  }
+}
