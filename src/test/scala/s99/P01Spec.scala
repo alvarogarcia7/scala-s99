@@ -106,4 +106,7 @@ class P05Spec extends PSpec {
   it should "reverse any size list" in {
 	  reverse(List(1,2,3,4,5,6)) shouldBe List(6,5,4,3,2,1)
   }
+  it should "reverse an empty list" in {
+	  reverse(List()) shouldBe List()
+  }
 }
