@@ -52,3 +52,9 @@ object P05 {
     case head :: tail => reverse(tail, output.+:(head))
   }
 }
+
+object P06 {
+  def palindrome[T](list: List[T]): Boolean = {
+    list == P05.reverse(list)
+  }
+}
