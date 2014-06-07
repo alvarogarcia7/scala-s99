@@ -14,7 +14,11 @@ import com.example.kata.scala.s99.P02.penultimate
 import com.example.kata.scala.s99.P03.kth
 
 @RunWith(classOf[JUnitRunner])
-class P01Spec extends FlatSpec with ShouldMatchers {
+class PSpec extends FlatSpec with ShouldMatchers {
+
+}
+
+class P01Spec extends PSpec {
 
   var list: List[Int] = null
 
@@ -31,8 +35,7 @@ class P01Spec extends FlatSpec with ShouldMatchers {
 
 }
 
-@RunWith(classOf[JUnitRunner])
-class P02Spec extends FlatSpec with ShouldMatchers {
+class P02Spec extends PSpec {
   "Penultimate()" should "retrieve the penultimate element in a list" in {
     penultimate(List(1, -1, 5)) shouldBe -1
   }
@@ -51,8 +54,7 @@ class P02Spec extends FlatSpec with ShouldMatchers {
   }
 }
 
-@RunWith(classOf[JUnitRunner])
-class P03Spec extends FlatSpec with ShouldMatchers {
+class P03Spec extends PSpec {
   "Kth element" should "return the first element from a list" in {
     kth(1, List(1, 1, 2, 5, 8, 13)) shouldBe 1
   }
