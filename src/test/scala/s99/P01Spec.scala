@@ -35,14 +35,17 @@ class P02Spec extends PSpec {
   "Penultimate()" should "retrieve the penultimate element in a list" in {
     penultimate(List(1, -1, 5)) shouldBe -1
   }
+
   it should "do the same in a two element list" in {
     penultimate(List(-1, 5)) shouldBe -1
   }
+  
   it should "fail in an empty list" in {
     intercept[NoSuchElementException] {
       penultimate(List())
     }
   }
+  
   it should "fail in a one element list" in {
     intercept[NoSuchElementException] {
       penultimate(List(1))
