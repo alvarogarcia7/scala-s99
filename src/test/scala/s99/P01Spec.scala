@@ -99,4 +99,8 @@ class P05Spec extends PSpec {
   "reverse()" should "reverse a one element list" in {
     reverse(List(1)) shouldBe List(1)
   }
+  
+  it should "reverse a two element list" in {
+    reverse(List(1,2)) shouldBe List(2,1)
+  }
 }
