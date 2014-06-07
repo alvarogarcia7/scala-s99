@@ -54,7 +54,26 @@ class P02Spec extends FlatSpec with ShouldMatchers {
 
 @RunWith(classOf[JUnitRunner])
 class P03Spec extends FlatSpec with ShouldMatchers{
-  "Kth element" should "return the correct element from a list" in {
-    kth(2, List(1,1,2,5,8,13)) shouldBe 2
+  "Kth element" should "return the first element from a list" in {
+    kth(1, List(1,1,2,5,8,13)) shouldBe 1
+  }
+  
+  it should "do the same with an intermediate element" in {
+	  kth(5, List(1,1,2,5,8,13)) shouldBe 8
+  }
+  
+  it should "do the same with the last element" in {
+	  kth(6, List(1,1,2,5,8,13)) shouldBe 13
+  }
+  
+  it should "fail with an index over the list size " in {
+    intercept[IndexOutOfBoundsException]{
+	  kth(1, List())
+    }
+  }
+  it should "fail with the index 0" in {
+	  intercept[NoSuchElementException]{
+		  kth(0, List())
+	  }
   }
 }
