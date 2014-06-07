@@ -19,12 +19,8 @@ class PSpec extends FlatSpec with ShouldMatchers {
 }
 
 class P01Spec extends PSpec {
-
-  var list: List[Int] = null
-
   "Last()" should "retrieve the last element in a list" in {
-    list = List(1, 8)
-    last(list) shouldBe 8
+    last(List(1, 8)) shouldBe 8
   }
 
   it should "fail if the list is empty" in {
