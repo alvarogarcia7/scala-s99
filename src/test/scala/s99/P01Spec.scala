@@ -135,5 +135,8 @@ class P08Spec extends PSpec {
   "compress" should "not compress a list with different elements" in {
     compress(List(1, 2)) shouldBe List(1, 2)
   }
+  "compress" should "compress a list with repeated elements with elements in between" in {
+    compress(List(1, 1, 2, 1, 1)) shouldBe List(1, 2, 1)
+  }
 }
 
