@@ -126,3 +126,10 @@ class P07Spec extends PSpec {
     flatten(List(List(1, List(1, 1)), 2, List(3, List(5, 8)))) shouldBe List(1, 1, 1, 2, 3, 5, 8)
   }
 }
+
+class P08Spec extends PSpec {
+  "compress" should "compress a list with repeated elements" in {
+    compress(List(1, 1)) shouldBe List(1)
+  }
+}
+
