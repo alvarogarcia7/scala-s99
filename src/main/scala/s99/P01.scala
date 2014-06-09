@@ -71,9 +71,9 @@ object P08 {
     compress(list, list.head, List(list.head))
   }
 
-  def compress[T](list: List[T], head: T, output: List[T]): List[T] = (list, head) match {
+  def compress[T](list: List[T], previousHead: T, output: List[T]): List[T] = (list, previousHead) match {
     case (Nil, _) => output
-    case (h :: tail, head) if (h == head) => compress(tail, head, output)
-    case (h :: tail, head) if (h != head) => compress(tail, h, output.+:(head))
+    case (head :: tail, previousHead) if (head == previousHead) => compress(tail, head, output)
+    case (head :: tail, previousHead) if (head != previousHead) => compress(tail, head, output.:+(head))
   }
 }
