@@ -43,13 +43,21 @@ object P04 {
 }
 
 object P05 {
-  def reverse[T](list: List[T]): List[T] = {
+  // tail recursive, as approved by http://aperiodic.net/phil/scala/s-99/p05.scala
+  def reverseTail[T](list: List[T]): List[T] = {
     def reverse[T](input: List[T], output: List[T]): List[T] = input match {
       case Nil => output
       case head :: tail => reverse(tail, head :: output)
     }
     reverse(list, List())
   }
+
+  //functional, inspired by http://aperiodic.net/phil/scala/s-99/p05.scala
+  def reverseFunctional[T](list: List[T]): List[T] = list.foldLeft(List[T]()) {
+    (left, list) => list :: left
+  }
+
+  def reverse[T](list: List[T]): List[T] = reverseFunctional(list)
 }
 
 object P06 {
