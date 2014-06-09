@@ -65,3 +65,15 @@ object P07 {
     case else_ => List(else_)
   }
 }
+
+object P08 {
+  def compress[T](list: List[T]): List[T] = {
+    compress(list, list.head, List(list.head))
+  }
+
+  def compress[T](list: List[T], head: T, output: List[T]): List[T] = (list, head) match {
+    case (Nil, _) => output
+    case (h :: tail, head) if (h == head) => compress(tail, head, output)
+    case (h :: tail, head) if (h != head) => compress(tail, h, output.+:(head))
+  }
+}
