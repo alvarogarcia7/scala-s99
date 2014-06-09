@@ -44,12 +44,11 @@ object P04 {
 
 object P05 {
   def reverse[T](list: List[T]): List[T] = {
+    def reverse[T](input: List[T], output: List[T]): List[T] = input match {
+      case Nil => output
+      case head :: tail => reverse(tail, output.+:(head))
+    }
     reverse(list, List())
-  }
-
-  def reverse[T](input: List[T], output: List[T]): List[T] = input match {
-    case Nil => output
-    case head :: tail => reverse(tail, output.+:(head))
   }
 }
 
