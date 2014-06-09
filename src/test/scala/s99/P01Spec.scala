@@ -130,7 +130,10 @@ class P07Spec extends PSpec {
 
 class P08Spec extends PSpec {
   "compress" should "compress a list with repeated elements" in {
-    compress(List(1, 1)) shouldBe List(1)
+    compress(List(1, 1, 1, 1)) shouldBe List(1)
+  }
+  "compress" should "not compress a list with different elements" in {
+    compress(List(1, 2)) shouldBe List(1, 2)
   }
 }
 
