@@ -58,3 +58,10 @@ object P06 {
     list == P05.reverse(list)
   }
 }
+
+object P07 {
+  def flatten(list: List[Any]): List[Any] = list flatMap {
+    case ls: List[_] => flatten(ls)
+    case else_ => List(else_)
+  }
+}

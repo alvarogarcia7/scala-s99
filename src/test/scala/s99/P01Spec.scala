@@ -15,6 +15,7 @@ import com.example.kata.scala.s99.P03.kth
 import com.example.kata.scala.s99.P04.len
 import com.example.kata.scala.s99.P05.reverse
 import com.example.kata.scala.s99.P06.palindrome
+import com.example.kata.scala.s99.P07.flatten
 
 @RunWith(classOf[JUnitRunner])
 class PSpec extends FlatSpec with ShouldMatchers {
