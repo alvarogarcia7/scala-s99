@@ -17,3 +17,9 @@ object P10 {
     P09.pack(list) map { any => (any.length, any.head) }
   }
 }
+
+object P11 {
+  def encodeModified(list: List[Symbol]): List[Any] = {
+    P09.pack(list) map { any => if (any.length > 1) (any.length, any.head) else (any.head) }
+  }
+}
