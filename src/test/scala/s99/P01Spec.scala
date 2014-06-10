@@ -140,3 +140,14 @@ class P08Spec extends PSpec {
   }
 }
 
+class FoldSpec extends PSpec {
+
+  //  def max(list: List[Int]): Int = list.foldLeft(0)((c, r) => { if (c > r) c else r })
+  def max(list: List[Int]): Int = list.foldRight(0)((c, r) => { if (c > r) c else r })
+
+  "max" should "find the maximum number" in {
+    max(List(1, 6, 3, 5)) shouldBe 6
+  }
+
+}
+
