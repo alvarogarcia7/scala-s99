@@ -1,10 +1,12 @@
 package s99;
 
 import org.junit.runner.RunWith
+
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.FlatSpec
 import org.scalatest.matchers.ShouldMatchers
 import scala.collection.mutable.Stack;
+import s99.P10._
 
 @RunWith(classOf[JUnitRunner])
 class PSpec extends FlatSpec with ShouldMatchers {
