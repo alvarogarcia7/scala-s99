@@ -36,3 +36,9 @@ object P13 {
     e => List(e, e)
   }
 }
+
+object P14 {
+  def duplicateN[T](times: Int, list: List[T]): List[T] = list flatMap {
+    e => List.fill(times)(e)
+  }
+}
