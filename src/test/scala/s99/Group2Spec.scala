@@ -39,3 +39,9 @@ class P14Spec extends PSpec {
     duplicate(List('a, 'b, 'c, 'c, 'd)) shouldBe List('a, 'a, 'b, 'b, 'c, 'c, 'c, 'c, 'd, 'd)
   }
 }
+
+class P15Spec extends PSpec {
+  "duplicateN" should "duplicate the elements in a list any number of times" in {
+    duplicateN(3, List('a, 'b, 'c, 'c, 'd)) shouldBe List('a, 'a, 'a, 'b, 'b, 'b, 'c, 'c, 'c, 'c, 'c, 'c, 'd, 'd, 'd)
+  }
+}
