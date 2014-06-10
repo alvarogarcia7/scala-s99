@@ -30,3 +30,9 @@ object P12 {
     list flatMap { any => List.fill(any._1)(any._2) }
   }
 }
+
+object P13 {
+  def duplicate[T](list: List[T]): List[T] = list flatMap {
+    e => List(e, e)
+  }
+}
