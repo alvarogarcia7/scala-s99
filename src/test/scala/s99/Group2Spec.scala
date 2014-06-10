@@ -7,20 +7,13 @@ import org.scalatest.matchers.ShouldMatchers
 import scala.collection.mutable.Stack;
 
 @RunWith(classOf[JUnitRunner])
-class StackSpec extends FlatSpec {
+class PSpec extends FlatSpec with ShouldMatchers {
 
-  "A Stack" should "pop values in last-in-first-out order" in {
-    val stack = new Stack[Int]
-    stack.push(1)
-    stack.push(2)
-    assert(stack.pop === 2)
-    assert(stack.pop === 1)
+}
+
+class P10Spec extends PSpec {
+  "encode()" should "encode a list using run-length format" in {
+    encode(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) shouldBe List((4, 'a), (1, 'b), (2, 'c), (2, 'a), (1, 'd), (4, 'e))
   }
 
-  it should "throw NoSuchElementException if an empty stack is popped" in {
-    val emptyStack = new Stack[String]
-    intercept[NoSuchElementException] {
-      emptyStack.pop
-    }
-  }
 }
