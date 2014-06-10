@@ -32,3 +32,9 @@ class P12Spec extends PSpec {
     decode(List((4, 'a), (1, 'b), (2, 'c), (2, 'a), (1, 'd), (4, 'e))) shouldBe List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
   }
 }
+
+class P14Spec extends PSpec {
+  "duplicate" should "duplicate the elements in a list" in {
+    duplicate(List('a, 'b, 'c, 'c, 'd)) shouldBe List('a, 'a, 'b, 'b, 'c, 'c, 'c, 'c, 'd, 'd)
+  }
+}

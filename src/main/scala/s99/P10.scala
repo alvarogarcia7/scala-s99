@@ -26,6 +26,7 @@ object P11 {
 
 object P12 {
   def decode[T](list: List[(Int, T)]): List[T] = {
+    //http://stackoverflow.com/questions/12300165/how-to-create-a-list-with-the-same-element-n-times
     list flatMap { any => List.fill(any._1)(any._2) }
   }
 }
