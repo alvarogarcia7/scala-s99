@@ -32,9 +32,8 @@ object P12 {
 }
 
 object P13 {
-  def duplicate[T](list: List[T]): List[T] = list flatMap {
-    e => List(e, e)
-  }
+  import P14.duplicateN
+  def duplicate[T](list: List[T]): List[T] = duplicateN(2, list)
 }
 
 object P14 {
