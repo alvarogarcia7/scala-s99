@@ -23,3 +23,9 @@ object P11 {
     P09.pack(list) map { any => if (any.length > 1) (any.length, any.head) else (any.head) }
   }
 }
+
+object P12 {
+  def decode[T](list: List[(Int, T)]): List[T] = {
+    list flatMap { any => List.fill(any._1)(any._2) }
+  }
+}
