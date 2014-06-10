@@ -46,3 +46,8 @@ class P15Spec extends PSpec {
     duplicateN(3, List('a, 'b, 'c, 'c, 'd)) shouldBe List('a, 'a, 'a, 'b, 'b, 'b, 'c, 'c, 'c, 'c, 'c, 'c, 'd, 'd, 'd)
   }
 }
+class P16Spec extends PSpec {
+  "drop" should "Drop every Nth element from a list" in {
+    drop(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) shouldBe List('a, 'b, 'd, 'e, 'g, 'h, 'j, 'k)
+  }
+}
