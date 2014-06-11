@@ -1,4 +1,4 @@
-scala-maven-test
+scala-s99
 ================
 
-The purpose is to have an empty repository with a maven file to build & pass tests. Like a base for future projects
+Some solutions to the S99 problems: http://aperiodic.net/phil/scala/s-99/
