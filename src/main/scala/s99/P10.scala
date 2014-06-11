@@ -41,3 +41,10 @@ object P14 {
     e => List.fill(times)(e)
   }
 }
+object P15 {
+  def drop[T](kth: Int, list: List[T]): List[T] =
+    {
+      var i: Int = 0
+      list.foldRight(List[T]()) { (left, cumulative) => { i = i + 1; if (i == kth) { i = 0; cumulative } else left :: cumulative; } }
+    }
+}
